@@ -7,6 +7,8 @@ Targets are named: linux-$(CONFIG_ARCH)-openwrt
 
 Signed-off-by: Eneas U de Queiroz <cote2004-github@yahoo.com>
 
+diff --git a/Configurations/25-openwrt.conf b/Configurations/25-openwrt.conf
+new file mode 100644
 --- /dev/null
 +++ b/Configurations/25-openwrt.conf
 @@ -0,0 +1,52 @@
@@ -23,7 +25,7 @@ Signed-off-by: Eneas U de Queiroz <cote2004-github@yahoo.com>
 +        inherit_from    => [ "linux-aarch64", "openwrt" ],
 +    },
 +    "linux-arc-openwrt" => {
-+        inherit_from    => [ "linux-latomic", "openwrt" ],
++        inherit_from    => [ "linux-generic32", "openwrt" ],
 +    },
 +    "linux-arm-openwrt" => {
 +        inherit_from    => [ "linux-armv4", "openwrt" ],

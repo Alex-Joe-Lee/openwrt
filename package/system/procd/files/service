@@ -2,17 +2,17 @@
 
 main() {
 	local service="$1"
-	shift
+	local cmd="$2"
 
 	local boot status
 
 	if [ -f "/etc/init.d/${service}" ]; then
-		/etc/init.d/"${service}" "$@"
+		/etc/init.d/"${service}" "${cmd}"
 		exit "$?"
 	fi
 
 	if [ -n "$service" ]; then
-		echo "Service \"$service\" not found:"
+		echo "Service \"$1\" not found:"
 		exit 1
 	fi
 

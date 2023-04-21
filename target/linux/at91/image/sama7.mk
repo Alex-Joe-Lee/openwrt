@@ -35,7 +35,7 @@ define Build/at91-sdcard
   ./gen_at91_sdcard_img.sh \
 	$@.img \
 	$@.boot \
-	$(IMAGE_ROOTFS) \
+	$(KDIR)/root.ext4 \
 	$(AT91_SD_BOOT_PARTSIZE) \
 	$(CONFIG_TARGET_ROOTFS_PARTSIZE)
 
